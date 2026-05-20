@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AjedrezWeb — Multijugador</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="chess-info.html" class="nav-logo">Ajedrez<span>Web</span></a>
+  <ul class="nav-links">
+    <li><a href="ajedrezInfo.html" data-i="nav1">Informacion</a></li>
+    <li><a href="vsIA.html" class="active" data-i="nav2">vs IA</a></li>
+    <li><a href="Pvp.html" data-i="nav3">Multijugador</a></li>
+  </ul>
+  <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
+</nav>
+
+<div class="game-outer">
+  <div class="page-head">
+    <div>
+      <div class="page-label" data-i="multiLabel">Modo de juego</div>
+      <h1 class="page-h1"><em data-i="multiH1">Multijugador Local</em></h1>
+    </div>
+    <p class="page-desc" data-i="multiDesc">Dos jugadores en el mismo dispositivo. Edita los nombres y elige el tiempo.</p>
+  </div>
+
+  
+  <div class="player-bar" id="player-bar">
+    <div class="player-card" id="card-w">
+      <div class="player-avatar av-w">&#9812;</div>
+      <div>
+        <div style="font-family:'Tenor Sans',sans-serif;font-size:0.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-bottom:0.3rem" data-i="pW">Blancas</div>
+        <input class="player-name-input" id="name-w" value="Jugador 1" maxlength="16">
+      </div>
+      <div class="player-timer" id="timer-w">--:--</div>
+    </div>
+
+    <div class="vs-block">
+      <div class="vs-text">VS</div>
+      <div class="vs-score">
+        <span id="score-w">0</span>
+        <span style="color:var(--gray);font-size:1rem;padding:0 0.35rem">-</span>
+        <span id="score-b">0</span>
+      </div>
+    </div>
+
+    <div class="player-card black-card" id="card-b">
+      <div class="player-avatar av-b">&#9818;</div>
+      <div style="text-align:right">
+        <div style="font-family:'Tenor Sans',sans-serif;font-size:0.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-bottom:0.3rem" data-i="pB">Negras</div>
+        <input class="player-name-input" id="name-b" value="Jugador 2" maxlength="16" style="text-align:right">
+      </div>
+      <div class="player-timer" id="timer-b">--:--</div>
+    </div>
+  </div>
+
+  <div class="game-wrap">
+    <div class="board-col">
+      <div class="board-outer">
+        <div class="rank-col" id="rank-col"></div>
+        <div class="chess-board" id="chess-board"></div>
+      </div>
+      <div class="file-row" id="file-row"></div>
+    </div>
+
+
+    <div class="panel">
+      <div class="panel-sec">
+        <div class="panel-lbl" data-i="lblStatus">Estado</div>
+        <div class="status-box" id="status-msg" data-i="initMsgMulti">Blancas inician. Mueve una pieza.</div>
+        <div class="turn-row">
+          <div class="turn-dot w-active" id="dot-w"></div>
+          <span class="turn-txt" id="turn-txt" data-i="turnWM">Turno — Blancas</span>
+          <div class="turn-dot" id="dot-b"></div>
+        </div>
+      </div>
+
+      <div class="panel-sec">
+        <div class="panel-lbl" data-i="lblTimer">Reloj</div>
+        <div class="time-presets">
+          <button class="time-preset active" onclick="setTime(0,this)" data-i="tOff">Sin reloj</button>
+          <button class="time-preset" onclick="setTime(3,this)" data-i="t3">3 min</button>
+          <button class="time-preset" onclick="setTime(5,this)" data-i="t5">5 min</button>
+          <button class="time-preset" onclick="setTime(10,this)" data-i="t10">10 min</button>
+        </div>
+      </div>
+
+      <div class="panel-sec">
+        <div class="panel-lbl" data-i="lblActions">Acciones</div>
+        <div class="action-list">
+          <button class="action-btn" onclick="newGame()"><em class="action-icon">&#9711;</em><span data-i="btnNew">Nueva Partida</span></button>
+          <button class="action-btn" onclick="undoMove()"><em class="action-icon">&#8617;</em><span data-i="btnUndo">Deshacer</span></button>
+          <button class="action-btn" onclick="offerDraw()"><em class="action-icon">&#9861;</em><span data-i="btnDraw">Ofrecer Tablas</span></button>
+          <button class="action-btn" onclick="resign()"><em class="action-icon">&#9873;</em><span data-i="btnResign">Rendirse</span></button>
+          <button class="action-btn" onclick="flipBoard()"><em class="action-icon">&#8645;</em><span data-i="btnFlip">Voltear Tablero</span></button>
+        </div>
+      </div>
+
+      <div class="panel-sec">
+        <div class="panel-lbl" data-i="lblMoves">Historial</div>
+        <div class="move-list" id="move-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="promo-overlay" id="promo-overlay">
+  <div class="promo-box">
+    <div class="promo-lbl" data-i="promoLbl">Promocion — Elige pieza</div>
+    <div class="promo-pieces" id="promo-pieces"></div>
+  </div>
+</div>
+
+
+<div class="win-overlay" id="win-overlay">
+  <div class="win-box">
+    <span class="win-sym">&#9813;</span>
+    <div class="win-title" id="win-title">Victoria</div>
+    <div class="win-sub"  id="win-sub">Descripcion</div>
+    <button class="win-btn" onclick="closeWin()" data-i="winBtn">Nueva Partida</button>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-brand">Ajedrez<span>Web</span></div>
+    <div class="foot-quote">"El ajedrez es la gimnasia de la mente." &mdash; Blaise Pascal</div>
+  </div>
+  <div class="foot-credits">
+    <p class="cred-label" data-i="credLabel">Desarrollado por</p>
+    <div class="cred-names">
+      <span class="cred-name">Ximena de Milagro</span>
+      <span class="cred-name">Karime Lizbeth</span>
+      <span class="cred-name">Barbara Paulina</span>
+      <span class="cred-name">Axel Xavier</span>
+      <span class="cred-name">Christoper</span>
+    </div>
+  </div>
+</footer>
+
+<script src="Ajedrez.js"></script>
+<script src="ajedrezpvplocal.js"></script>
+</body>
+</html>

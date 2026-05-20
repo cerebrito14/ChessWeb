@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AjedrezWeb — Informacion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="chess-info.html" class="nav-logo">Ajedrez<span>Web</span></a>
+  <ul class="nav-links">
+    <li><a href="ajedrezInfo.html" data-i="nav1">Informacion</a></li>
+    <li><a href="vsIA.html" class="active" data-i="nav2">vs IA</a></li>
+    <li><a href="Pvp.html" data-i="nav3">Multijugador</a></li>
+  </ul>
+  <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <h1 class="hero-h1">Ajedrez<strong data-i="heroStrong">Web</strong></h1>
+    <div class="hero-line"></div>
+    <div class="hero-btns">
+      <a href="vsIA.html"   class="btn-primary" data-i="heroB1">Jugar vs IA</a>
+      <a href="Pvp.html" class="btn-ghost"   data-i="heroB2">Multijugador</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="historia">
+  <div class="container">
+    <h2 class="sec-title" data-i="h1Title">Historia y <em>Origen</em></h2>
+    <div class="hist-layout">
+      <div class="hist-text">
+        <p data-i="hP1">El ajedrez nacio en <b>India</b> alrededor del siglo VI d.C. bajo el nombre de <em>Chaturanga</em>, que significa las cuatro divisiones del ejercito.</p>
+        <p data-i="hP2">Desde India viajo a <b>Persia</b> como <em>Shatranj</em>. El termino jaque mate proviene del persa <em>shah mat</em>: <b>el rey ha muerto</b>.</p>
+        <p data-i="hP3">Con la expansion del <b>Imperio Arabe</b> en el siglo VII el juego llego a <b>Europa</b>. El consejero se convirtio en la poderosa <b>reina</b> medieval.</p>
+        <p data-i="hP4">En 1851 el <b>primer torneo internacional</b> se celebro en Londres. Hoy hay mas de <b>600 millones</b> de jugadores activos.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">~550 d.C.</div><div class="tl-ev" data-i="t1e">Chaturanga, India</div><div class="tl-desc" data-i="t1d">Primeras referencias en textos sanskritos.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">~600 d.C.</div><div class="tl-ev" data-i="t2e">Shatranj, Persia</div><div class="tl-desc" data-i="t2d">El rey Cosroes I recibe el juego.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">700 - 900</div><div class="tl-ev" data-i="t3e">Expansion arabe</div><div class="tl-desc" data-i="t3d">El califato lleva el juego a Espana y Asia Central.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1475</div><div class="tl-ev" data-i="t4e">Ajedrez moderno</div><div class="tl-desc" data-i="t4d">En Espana la reina se convierte en la pieza mas poderosa.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1886</div><div class="tl-ev" data-i="t5e">1er Campeonato Mundial</div><div class="tl-desc" data-i="t5d">Steinitz vence a Zukertort. Primer campeon oficial.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1997</div><div class="tl-ev" data-i="t6e">Deep Blue vs Kasparov</div><div class="tl-desc" data-i="t6d">Primera computadora que derrota al campeon mundial.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">2013</div><div class="tl-ev" data-i="t7e">Era Carlsen</div><div class="tl-desc" data-i="t7d">Magnus Carlsen: ELO mas alto de la historia, 2882.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="curiosidades">
+  <div class="container">
+    <h2 class="sec-title" data-i="c1Title">Datos <em>Curiosos</em></h2>
+    <div class="curio-grid">
+      <div class="curio-card"><span class="curio-num" data-i="cn1">01 — Matematicas</span><div class="curio-title" data-i="ct1">Mas posibilidades que atomos</div><div class="curio-text" data-i="cd1">El numero de partidas posibles supera el numero de atomos del universo.</div></div>
+      <div class="curio-card"><span class="curio-num" data-i="cn2">02 — Leyenda</span><div class="curio-title" data-i="ct2">La recompensa del inventor</div><div class="curio-text" data-i="cd2">El inventor pidio granos de trigo duplicandose en cada casilla.</div></div>
+      <div class="curio-card"><span class="curio-num" data-i="cn3">03 — Deporte</span><div class="curio-title" data-i="ct3">6000 calorias por dia</div><div class="curio-text" data-i="cd3">Los GM pueden quemar hasta 6000 calorias en torneo.</div></div>
+      <div class="curio-card"><span class="curio-num" data-i="cn4">04 — Record</span><div class="curio-title" data-i="ct4">El mate mas rapido</div><div class="curio-text" data-i="cd4">El mate del loco ocurre en 2 movimientos.</div></div>
+      <div class="curio-card"><span class="curio-num" data-i="cn5">05 — Historia</span><div class="curio-title" data-i="ct5">Reyes y emperadores</div><div class="curio-text" data-i="cd5">Carlomagno, Napoleon y Catalina la Grande fueron jugadores apasionados.</div></div>
+      <div class="curio-card"><span class="curio-num" data-i="cn6">06 — Literatura</span><div class="curio-title" data-i="ct6">El libro mas antiguo</div><div class="curio-text" data-i="cd6">Repeticion de Amores y Arte de Ajedrez (1497).</div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="como-jugar">
+  <div class="container">
+    <h2 class="sec-title" data-i="h2Title">Como <em>Jugar</em></h2>
+    <p style="font-size:1.1rem;font-weight:300;color:rgba(255,255,255,0.45);max-width:560px;line-height:1.9;margin-bottom:3rem;font-style:italic" data-i="howIntro">El objetivo es dar jaque mate al rey enemigo. Dos jugadores, 16 piezas cada uno, 64 casillas.</p>
+    <div class="piezas-grid">
+      <div class="pieza-card"><span class="pieza-sym">&#9812;</span><div class="pieza-name" data-i="pk">Rey</div><div class="pieza-desc" data-i="pkd">Una casilla en cualquier direccion.</div></div>
+      <div class="pieza-card"><span class="pieza-sym">&#9813;</span><div class="pieza-name" data-i="pq">Reina</div><div class="pieza-desc" data-i="pqd">Linea recta o diagonal sin limite.</div></div>
+      <div class="pieza-card"><span class="pieza-sym">&#9814;</span><div class="pieza-name" data-i="pr">Torre</div><div class="pieza-desc" data-i="prd">Horizontal o vertical sin limite.</div></div>
+      <div class="pieza-card"><span class="pieza-sym">&#9815;</span><div class="pieza-name" data-i="pb">Alfil</div><div class="pieza-desc" data-i="pbd">Diagonal. Siempre en el mismo color.</div></div>
+      <div class="pieza-card"><span class="pieza-sym">&#9816;</span><div class="pieza-name" data-i="pn">Caballo</div><div class="pieza-desc" data-i="pnd">Movimiento en L. Salta sobre otras piezas.</div></div>
+      <div class="pieza-card"><span class="pieza-sym">&#9817;</span><div class="pieza-name" data-i="pp">Peon</div><div class="pieza-desc" data-i="ppd">Avanza uno o dos casillas. Puede promover.</div></div>
+    </div>
+    <div class="reglas-grid">
+      <div class="regla-item"><div class="regla-num">I</div><div class="regla-text" data-i="r1"><b>Las blancas mueven primero.</b> Los jugadores alternan turnos.</div></div>
+      <div class="regla-item"><div class="regla-num">II</div><div class="regla-text" data-i="r2"><b>Jaque:</b> El rey esta amenazado y debe resolverse en ese turno.</div></div>
+      <div class="regla-item"><div class="regla-num">III</div><div class="regla-text" data-i="r3"><b>Jaque Mate:</b> El rey en jaque sin escape. Fin de la partida.</div></div>
+      <div class="regla-item"><div class="regla-num">IV</div><div class="regla-text" data-i="r4"><b>Enroque:</b> El rey se mueve dos casillas y la torre salta al otro lado.</div></div>
+      <div class="regla-item"><div class="regla-num">V</div><div class="regla-text" data-i="r5"><b>En passant:</b> Captura diagonal de un peon que avanzo dos casillas.</div></div>
+      <div class="regla-item"><div class="regla-num">VI</div><div class="regla-text" data-i="r6"><b>Tablas:</b> Ahogado, triple repeticion, 50 movimientos, o acuerdo.</div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="aperturas">
+  <div class="container">
+    <h2 class="sec-title" data-i="h3Title">Aperturas <em>Principales</em></h2>
+    <p style="font-size:1.1rem;font-weight:300;color:var(--gray2);max-width:540px;line-height:1.9;font-style:italic" data-i="apIntro">Los primeros movimientos definen el caracter de la partida.</p>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="showTab('lopez',this)">Ruy Lopez</button>
+      <button class="tab-btn" onclick="showTab('sic',this)">Siciliana</button>
+      <button class="tab-btn" onclick="showTab('ita',this)">Italiana</button>
+      <button class="tab-btn" onclick="showTab('fra',this)">Francesa</button>
+      <button class="tab-btn" onclick="showTab('caro',this)">Caro-Kann</button>
+      <button class="tab-btn" onclick="showTab('india',this)">India de Rey</button>
+    </div>
+    <div class="ap-panel active" id="ap-lopez"><div class="mini-board-wrap"><div class="mini-board" id="mb-lopez"></div></div><div><span class="ap-badge badge-w" data-i="bW">Blancas</span><div class="ap-name" data-i="ap1n">Ruy Lopez</div><div class="ap-lvl" data-i="ap1r">Nivel avanzado</div><div class="ap-moves">1.e4 e5 &nbsp; 2.Cf3 Cc6 &nbsp; 3.Ab5</div><p class="ap-desc" data-i="ap1d">Conocida como Apertura Espanola. El alfil en b5 presiona el peon en e5. Favorita de Fischer, Karpov y Kasparov.</p></div></div>
+    <div class="ap-panel" id="ap-sic"><div class="mini-board-wrap"><div class="mini-board" id="mb-sic"></div></div><div><span class="ap-badge badge-b" data-i="bB">Negras</span><div class="ap-name" data-i="ap2n">Defensa Siciliana</div><div class="ap-lvl" data-i="ap2r">La mas jugada del mundo</div><div class="ap-moves">1.e4 c5</div><p class="ap-desc" data-i="ap2d">Con c5 las negras luchan asimetricamente. Variantes: Dragon, Najdorf y Scheveningen.</p></div></div>
+    <div class="ap-panel" id="ap-ita"><div class="mini-board-wrap"><div class="mini-board" id="mb-ita"></div></div><div><span class="ap-badge badge-w" data-i="bW2">Blancas</span><div class="ap-name" data-i="ap3n">Apertura Italiana</div><div class="ap-lvl" data-i="ap3r">Ideal para principiantes</div><div class="ap-moves">1.e4 e5 &nbsp; 2.Cf3 Cc6 &nbsp; 3.Ac4</div><p class="ap-desc" data-i="ap3d">Documentada en el siglo XV. El alfil en c4 apunta al debil f7. Excelente para aprender principios basicos.</p></div></div>
+    <div class="ap-panel" id="ap-fra"><div class="mini-board-wrap"><div class="mini-board" id="mb-fra"></div></div><div><span class="ap-badge badge-b" data-i="bB2">Negras</span><div class="ap-name" data-i="ap4n">Defensa Francesa</div><div class="ap-lvl" data-i="ap4r">Solida y contrariante</div><div class="ap-moves">1.e4 e6 &nbsp; 2.d4 d5</div><p class="ap-desc" data-i="ap4d">Cadena de peones solida con contraataques en el flanco de la dama. Ideal para posiciones estrategicas.</p></div></div>
+    <div class="ap-panel" id="ap-caro"><div class="mini-board-wrap"><div class="mini-board" id="mb-caro"></div></div><div><span class="ap-badge badge-b" data-i="bB3">Negras</span><div class="ap-name" data-i="ap5n">Caro-Kann</div><div class="ap-lvl" data-i="ap5r">Solida y posicional</div><div class="ap-moves">1.e4 c6 &nbsp; 2.d4 d5</div><p class="ap-desc" data-i="ap5d">Estructura limpia sin alfil malo. Favorita de Karpov, Anand y Carlsen.</p></div></div>
+    <div class="ap-panel" id="ap-india"><div class="mini-board-wrap"><div class="mini-board" id="mb-india"></div></div><div><span class="ap-badge badge-b" data-i="bB4">Negras</span><div class="ap-name" data-i="ap6n">India de Rey</div><div class="ap-lvl" data-i="ap6r">Hipermoderna y dinamica</div><div class="ap-moves">1.d4 Cf6 &nbsp; 2.c4 g6 &nbsp; 3.Cc3 Ag7</div><p class="ap-desc" data-i="ap6d">Las negras permiten que el rival ocupe el centro para atacarlo desde los flancos con el alfil en g7.</p></div></div>
+  </div>
+</section>
+
+
+<section id="consejos">
+  <div class="container">
+    <h2 class="sec-title" data-i="h4Title">Consejos de <em>Juego</em></h2>
+    <div class="consejos-grid">
+      <div class="consejo-card"><span class="consejo-num" data-i="cs1c">Apertura</span><div class="consejo-title" data-i="cs1t">Controla el Centro</div><div class="consejo-text" data-i="cs1d">Las casillas centrales son el corazon del tablero. Ocupalas desde el primer movimiento.</div></div>
+      <div class="consejo-card"><span class="consejo-num" data-i="cs2c">Apertura</span><div class="consejo-title" data-i="cs2t">Desarrolla Tus Piezas</div><div class="consejo-text" data-i="cs2d">Saca caballos y alfiles antes que la reina o torres. No muevas la misma pieza dos veces.</div></div>
+      <div class="consejo-card"><span class="consejo-num" data-i="cs3c">Apertura</span><div class="consejo-title" data-i="cs3t">Enroca Pronto</div><div class="consejo-text" data-i="cs3d">El enroque protege al rey y conecta las torres. Hazlo antes del decimo movimiento.</div></div>
+      <div class="consejo-card"><span class="consejo-num" data-i="cs4c">Medio Juego</span><div class="consejo-title" data-i="cs4t">Piensa Antes de Mover</div><div class="consejo-text" data-i="cs4d">Preguntate si dejas piezas sin defensa o creas debilidades. El jugador reflexivo comete menos errores.</div></div>
+      <div class="consejo-card"><span class="consejo-num" data-i="cs5c">Tactica</span><div class="consejo-title" data-i="cs5t">Practica Tacticas Diarias</div><div class="consejo-text" data-i="cs5d">Horquillas, clavadas y ataques descubiertos son la via directa para obtener ventaja.</div></div>
+      <div class="consejo-card"><span class="consejo-num" data-i="cs6c">Final</span><div class="consejo-title" data-i="cs6t">Activa Tu Rey</div><div class="consejo-text" data-i="cs6d">En el final el rey se convierte en una pieza activa. Llevalo al centro.</div></div>
+      <div class="consejo-card"><span class="consejo-num" data-i="cs7c">Estrategia</span><div class="consejo-title" data-i="cs7t">Evita Peones Debiles</div><div class="consejo-text" data-i="cs7d">Los peones doblados y aislados son debilidades permanentes dificiles de defender.</div></div>
+      <div class="consejo-card"><span class="consejo-num" data-i="cs8c">Mental</span><div class="consejo-title" data-i="cs8t">Calma Tras los Errores</div><div class="consejo-text" data-i="cs8d">Todos los grandes maestros cometen errores. Lo que los distingue es no derrumbarse.</div></div>
+      <div class="consejo-card"><span class="consejo-num" data-i="cs9c">Aprendizaje</span><div class="consejo-title" data-i="cs9t">Analiza Tus Partidas</div><div class="consejo-text" data-i="cs9d">Revisa tus partidas con un motor de analisis. Identificar el error es la clave del aprendizaje.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-brand">Ajedrez<span>Web</span></div>
+  </div>
+  <div class="foot-credits">
+    <p class="cred-label" data-i="credLabel">Desarrollado por</p>
+    <div class="cred-names">
+      <span class="cred-name">Ximena de Milagro</span>
+      <span class="cred-name">Karime Lizbeth</span>
+      <span class="cred-name">Barbara Paulina</span>
+      <span class="cred-name">Axel Xavier</span>
+      <span class="cred-name">Christoper Balam</span>
+    </div>
+  </div>
+</footer>
+
+<script src="Ajedrez.js"></script>
+<script>
+  buildMiniBoard('mb-lopez',{'5,1':'#C8A84B'});
+  buildMiniBoard('mb-sic',  {'3,2':'#C8A84B'});
+  buildMiniBoard('mb-ita',  {'5,2':'#C8A84B'});
+  buildMiniBoard('mb-fra',  {'3,3':'#C8A84B','3,4':'rgba(200,168,75,0.55)'});
+  buildMiniBoard('mb-caro', {'3,2':'#C8A84B','3,3':'rgba(200,168,75,0.55)'});
+  buildMiniBoard('mb-india',{'5,5':'#C8A84B','3,6':'rgba(200,168,75,0.55)'});
+  function showTab(n,btn){document.querySelectorAll('.ap-panel').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(e=>e.classList.remove('active'));document.getElementById('ap-'+n).classList.add('active');btn.classList.add('active');}
+  initLang();
+</script>
+</body>
+</html>

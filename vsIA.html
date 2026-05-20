@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AjedrezWeb — vs IA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="chess-info.html" class="nav-logo">Ajedrez<span>Web</span></a>
+  <ul class="nav-links">
+    <li><a href="ajedrezInfo.html" data-i="nav1">Informacion</a></li>
+    <li><a href="vsIA.html" class="active" data-i="nav2">vs IA</a></li>
+    <li><a href="Pvp.html" data-i="nav3">Multijugador</a></li>
+  </ul>
+  <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
+</nav>
+
+<div class="game-outer">
+  <div class="page-head">
+    <div>
+      <div class="page-label" data-i="botLabel">Modo de juego</div>
+      <h1 class="page-h1">vs <em data-i="botH1">Inteligencia Artificial</em></h1>
+    </div>
+    <p class="page-desc" data-i="botDesc">Tu juegas con las piezas blancas. La IA responde con las negras. Selecciona el nivel de dificultad.</p>
+  </div>
+
+  <div class="game-wrap">
+    <div class="board-col">
+      <div class="board-outer">
+        <div class="rank-col" id="rank-col"></div>
+        <div class="chess-board" id="chess-board"></div>
+      </div>
+      <div class="file-row" id="file-row"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-sec">
+        <div class="panel-lbl" data-i="lblStatus">Estado</div>
+        <div class="status-box" id="status-msg" data-i="initMsgBot">Mueve una pieza blanca para comenzar.</div>
+        <div class="turn-row">
+          <div class="turn-dot w-active" id="dot-w"></div>
+          <span class="turn-txt" id="turn-txt" data-i="turnW">Turno — Blancas</span>
+          <div class="turn-dot" id="dot-b"></div>
+        </div>
+      </div>
+      <div class="panel-sec">
+        <div class="panel-lbl" data-i="lblDiff">Dificultad</div>
+        <div class="diff-row">
+          <button class="diff-btn active" onclick="setDiff(1,this)" data-i="d1">Facil</button>
+          <button class="diff-btn" onclick="setDiff(2,this)" data-i="d2">Medio</button>
+          <button class="diff-btn" onclick="setDiff(3,this)" data-i="d3">Dificil</button>
+        </div>
+      </div>
+      <div class="panel-sec">
+        <div class="panel-lbl" data-i="lblScore">Marcador</div>
+        <div class="score-row">
+          <div class="score-card"><div class="score-lbl" data-i="sW">Blancas</div><div class="score-val" id="score-w">0</div></div>
+          <div class="score-card"><div class="score-lbl" data-i="sAI">IA Negras</div><div class="score-val" id="score-b">0</div></div>
+        </div>
+      </div>
+      <div class="panel-sec">
+        <div class="panel-lbl" data-i="lblActions">Acciones</div>
+        <div class="action-list">
+          <button class="action-btn" onclick="newGame()"><em class="action-icon">&#9711;</em><span data-i="btnNew">Nueva Partida</span></button>
+          <button class="action-btn" onclick="undoMove()"><em class="action-icon">&#8617;</em><span data-i="btnUndo">Deshacer</span></button>
+          <button class="action-btn" onclick="flipBoard()"><em class="action-icon">&#8645;</em><span data-i="btnFlip">Voltear Tablero</span></button>
+        </div>
+      </div>
+      <div class="panel-sec">
+        <div class="panel-lbl" data-i="lblMoves">Historial</div>
+        <div class="move-list" id="move-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="promo-overlay" id="promo-overlay">
+  <div class="promo-box">
+    <div class="promo-lbl" data-i="promoLbl">Promocion — Elige pieza</div>
+    <div class="promo-pieces" id="promo-pieces"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-brand">Ajedrez<span>Web</span></div>
+    <div class="foot-quote">"El ajedrez es la gimnasia de la mente." &mdash; Blaise Pascal</div>
+  </div>
+  <div class="foot-credits">
+    <p class="cred-label" data-i="credLabel">Desarrollado por</p>
+    <div class="cred-names">
+      <span class="cred-name">Ximena de Milagro</span>
+      <span class="cred-name">Karime Lizbeth</span>
+      <span class="cred-name">Barbara Paulina</span>
+      <span class="cred-name">Axel Xavier</span>
+      <span class="cred-name">Christoper</span>
+    </div>
+  </div>
+</footer>
+
+<script src="Ajedrez.js"></script>
+<script src="ajedrezvsia.js"></script>
+</body>
+</html>
